@@ -40,7 +40,7 @@ public class DriverConfig {
                 //chromeOptions.addArguments("['start-maximized']");
                 //driver = new ChromeDriver(chromeOptions);
                 try {
-                    driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), new ChromeOptions());
+                    driver = new RemoteWebDriver(new URL("http://selenium_grid_selenium-hub_1:4444/wd/hub"), new ChromeOptions());
                     driver.manage().window().maximize();
                 } catch (MalformedURLException e) {
                     System.out.println("Invalid URL");
@@ -50,7 +50,7 @@ public class DriverConfig {
                 //WebDriverManager.firefoxdriver().setup();
                 //driver = new FirefoxDriver();
                 try {
-                    driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), new FirefoxOptions());
+                    driver = new RemoteWebDriver(new URL("http://selenium_grid_selenium-hub_1:4444/wd/hub"), new FirefoxOptions());
                     driver.manage().window().maximize();
                 } catch (MalformedURLException e) {
                     System.out.println("Invalid URL");
