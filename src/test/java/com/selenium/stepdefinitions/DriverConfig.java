@@ -24,8 +24,8 @@ import java.util.concurrent.TimeUnit;
 @ComponentScan(basePackages = "com.selenium")
 public class DriverConfig {
 
-    @Bean
     @Scope("cucumber-glue")
+    @Bean(destroyMethod = "quit")
     public WebDriver webDriver(){
         WebDriver driver = null;
         ConfigFileReader configFileReader = new ConfigFileReader();
